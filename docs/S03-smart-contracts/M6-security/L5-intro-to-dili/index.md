@@ -17,7 +17,7 @@ Along with audits, Diligence also provides automated security analysis through t
 
 [MythX](https://mythx.io/) is a smart contract security service for Ethereum built by ConsenSys Diligence. As part of the bootcamp, we have gotten a free month of the developer plan for every student from the ConsenSys Diligence team.
 
-**Promo code** = `x9naNrvz`
+**Promo code** = `7LFZDUXG`
 
 ## Steps to Get Started
 
@@ -30,7 +30,7 @@ Along with audits, Diligence also provides automated security analysis through t
 
 ## Scribble
 
-Diligence also provides another analysis tool called Scribble, which is "Fuzzing as a Service."
+Diligence also provides another analysis tool called Scribble, a specification language for solidity which can be used together with Diligence Fuzzing.
 
 Fuzzing is a general computer security automation method that essentially runs millions of tests against your codebase. There's a bit of structure involved, but the overall concept is applicable to all other computer security industries.
 

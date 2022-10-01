@@ -16,11 +16,11 @@ By installing and running geth, you can take part in the Ethereum live network a
 
 Geth has several interfaces through which you can communicate with your Ethereum node.
 
-*   Javascript Console: you can start geth with an interactive console, that provides a javascript runtime environment exposing a javascript API to interact with your node. The [Javascript Console API](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console){target=_blank} includes the web3 javascript Ðapp API as well as an 'admin' API.
+*   JavaScript Console: you can start geth with an interactive console, that provides a javascript runtime environment exposing a javascript API to interact with your node. The [JavaScript Console API](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console){target=_blank} includes the web3 javascript Ðapp API as well as an 'admin' API.
 *   JSON-RPC server: you can start geth with a json-rpc server that exposes the [JSON-RPC API](https://github.com/ethereum/wiki/wiki/JSON-RPC){target=_blank}
 *   [Command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options){target=_blank} documents command line parameters as well as subcommands.
 
-[See this page](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum){target=_blank} for instructions on how to install geth for your platform.
+[See this page](https://geth.ethereum.org/docs/install-and-build/installing-geth){target=_blank} for instructions on how to install geth for your platform.
 
 Install geth and start interacting with our node.
 
@@ -51,6 +51,13 @@ geth attach ~/.ethereum/geth.ipc
 ```
 
 ![](https://learn.consensys.net/images/screenshot2.png)![screenshot2.png](https://files.cdn.thinkific.com/file_uploads/205430/images/582/86a/0d0/1595097114702.jpg)
+
+
+if you are on Windows, you have to access the javascript console using the pipe geth created by typing the following:
+
+```
+geth attach ipc:\\.\pipe\geth.ipc
+```
 
 Or when you start geth, you can type
 
@@ -200,7 +207,11 @@ An ethereum transaction includes the following data:
 
 <code>nonce:</code> Number - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
 
-To send some ether to another account, you just need to specify the send, the recipient and the value.
+To send some ether to another account, first create another account.
+
+    > personal.newAccount()
+
+Next initiate the transaction by specifying the to, the from and the value.
 
     > eth.sendTransaction({to: eth.accounts[1], from: eth.accounts[0], value: 100})
 
@@ -230,3 +241,7 @@ Check the balance of account 1 again.
     100
 
 It should say 100! You have successfully sent a transaction from one account to another over your single node Ethereum network!
+
+## Additional Materials
+
+- [Running Geth in `dev` Mode](https://geth.ethereum.org/docs/getting-started/dev-mode) - an optimized way to run a single node for developing locally
