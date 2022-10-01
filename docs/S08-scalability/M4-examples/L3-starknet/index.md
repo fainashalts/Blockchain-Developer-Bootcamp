@@ -87,7 +87,9 @@ The Truffle StarkNet Box offers additional functionality to make developing your
 
 MetaMask does not work with StarkNet by default, but there is a [MetaMask Snap](https://consensys.net/blog/metamask/metamask-integrates-starkware-into-first-of-its-kind-zk-rollup-snap/) that allows for this functionality. 
 
-If you choose, you may also try a different wallet to connect with StarkNet, such as [Argent](https://www.argent.xyz/argent-x/)
+If you choose, you may also try a different wallet to connect with StarkNet, such as [Argent X](https://www.argent.xyz/argent-x/)
+
+**Note:** Neither the MetaMask StarkNet Snap nor Argent X wallets can be used with the Truffle StarkNet Box. The Truffle StarkNet Box uses its own local accounts for development and testing of Cairo contracts.
 
 ## Additional Materials
 - [StarkNet and Cairo documentation](https://starknet.io/docs/index.html)
